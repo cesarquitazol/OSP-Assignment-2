@@ -4,6 +4,6 @@
     "\\jq-jq-1.6",
     "\\jq-jq-1.6\\src"
   ],
-  "SelectedNode": "\\jq-jq-1.6\\Makefile.am",
+  "SelectedNode": "\\jq-jq-1.6\\src\\logger.c",
   "PreviewInSolutionExplorer": false
 }

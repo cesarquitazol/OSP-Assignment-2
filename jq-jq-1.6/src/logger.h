@@ -4,7 +4,7 @@
 #include <time.h>
 #include <fstream>
 
-void log(const char* tag, const char* message);
+void logger(const char* tag, const char* message);
 
 
 enum LogPriority {
