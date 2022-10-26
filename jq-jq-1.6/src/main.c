@@ -48,6 +48,7 @@ static void usage(int code, int keep_it_short) {
     f = stdout;
 
   int ret = fprintf(f,
+    "Operating Systems Principles Assignment 2"
     "jq - commandline JSON processor [version %s]\n"
     "\nUsage:\t%s [options] <jq filter> [file...]\n"
     "\t%s [options] --args <jq filter> [strings...]\n"
