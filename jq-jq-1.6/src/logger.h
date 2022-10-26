@@ -3,13 +3,14 @@
 
 #include <time.h>
 #include <fstream>
-
-void logger(const char* tag, const char* message);
-
-
 enum LogPriority {
     TraceP, DebugP, InfoP, WarnP, ErrorP, FatalP
 };
+
+static void logger(enum LogPriority priority, const char* message);
+
+
+
 
 
 

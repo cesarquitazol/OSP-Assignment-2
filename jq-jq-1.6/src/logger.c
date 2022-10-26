@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 
-void logger(enum LogPriority priority, const char* message) {
+static void logger(enum LogPriority priority, const char* message) {
 	time_t current;
 	time(&current);
 

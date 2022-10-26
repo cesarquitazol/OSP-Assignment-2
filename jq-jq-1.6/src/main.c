@@ -27,11 +27,14 @@
 #endif
 
 #include "compile.h"
+#include "logger.h"
 #include "jv.h"
 #include "jq.h"
 #include "jv_alloc.h"
 #include "util.h"
 #include "src/version.h"
+
+
 
 int jq_testsuite(jv lib_dirs, int verbose, int argc, char* argv[]);
 
@@ -235,6 +238,7 @@ static void debug_cb(void *data, jv input) {
   jv_dumpf(JV_ARRAY(jv_string("DEBUG:"), input), stderr, dumpopts & ~(JV_PRINT_PRETTY));
   fprintf(stderr, "\n");
 }
+LogPriority 
 
 int main(int argc, char* argv[]) {
   jq_state *jq = NULL;
@@ -243,6 +247,9 @@ int main(int argc, char* argv[]) {
   int parser_flags = 0;
   int nfiles = 0;
   int badwrite;
+  enum LogPriority status = InfoP;
+  
+  logger(status, "Main Method Initiated" );
   jv ARGS = jv_array(); /* positional arguments */
   jv program_arguments = jv_object(); /* named arguments */
 
